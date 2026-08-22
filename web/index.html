@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetterUp People Tech | Onboarding Sync & SLA Control Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header & Banner -->
+        <header class="header">
+            <div class="logo-group">
+                <div class="logo-icon">BU</div>
+                <div>
+                    <h1>BetterUp People Technology</h1>
+                    <p class="subtitle">Unified Onboarding Sync, Pre-Flight Validation & SLA Watchdog Engine</p>
+                </div>
+            </div>
+            <div class="system-status-pills">
+                <span class="status-pill green" id="ledger-status"><span class="dot"></span> Audit Hash Chain: Verified</span>
+                <span class="status-pill blue" id="engine-status"><span class="dot"></span> Idempotency Engine: Active</span>
+                <span class="status-pill purple" id="mcp-status"><span class="dot"></span> Claude MCP: Online</span>
+            </div>
+        </header>
+
+        <!-- Main Layout Grid -->
+        <main class="main-content">
+            <!-- Left Column: Interactive Simulation Control Center -->
+            <section class="panel simulation-panel">
+                <div class="panel-header">
+                    <h2>🎮 Onboarding Event Simulator</h2>
+                    <span class="badge">Interactive Scenarios</span>
+                </div>
+                <p class="panel-desc">Simulate real-world onboarding disruptions and watch the engine reconcile state deterministically across all 6 systems.</p>
+                
+                <div class="simulation-actions">
+                    <button class="sim-btn primary" onclick="runSimulation('CHANGE_START_DATE')">
+                        <span class="btn-icon">⚡</span>
+                        <div>
+                            <strong>1. Post-Offer Start Date Shift</strong>
+                            <small>Pushes Maya Lin's start date in Ashby -> Reconciles Workday, Okta & ExpoIT</small>
+                        </div>
+                    </button>
+
+                    <button class="sim-btn warning" onclick="runSimulation('INJECT_BAD_ADDRESS')">
+                        <span class="btn-icon">🛡️</span>
+                        <div>
+                            <strong>2. Pre-Flight Bad Data Trap</strong>
+                            <small>Attempts hire with invalid ZIP code -> Pre-flight validator blocks propagation</small>
+                        </div>
+                    </button>
+
+                    <button class="sim-btn success" onclick="runSimulation('CREATE_OFF_CYCLE_HIRE')">
+                        <span class="btn-icon">🚀</span>
+                        <div>
+                            <strong>3. Off-Cycle Direct Hire</strong>
+                            <small>Creates executive directly in Workday -> Auto-provisions Okta, ExpoIT & Tracker</small>
+                        </div>
+                    </button>
+
+                    <button class="sim-btn alert" onclick="scanSLAExceptions()">
+                        <span class="btn-icon">⏰</span>
+                        <div>
+                            <strong>4. SLA Watchdog Deadline Scan</strong>
+                            <small>Scans T-7 hardware lead times & triggers Claude AI Slack escalations</small>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="simulation-result-box" id="sim-result-box">
+                    <div class="result-header">
+                        <span>Simulation Execution Log</span>
+                        <span class="timestamp" id="last-exec-time">Ready</span>
+                    </div>
+                    <pre id="sim-log">Click a scenario button above to execute simulation...</pre>
+                </div>
+            </section>
+
+            <!-- Right Column: Multi-System Live Matrix -->
+            <section class="panel matrix-panel">
+                <div class="panel-header">
+                    <h2>📊 Multi-System State Matrix</h2>
+                    <button class="btn-refresh" onclick="refreshSystemState()">↻ Refresh Matrix</button>
+                </div>
+
+                <div class="matrix-grid" id="matrix-grid">
+                    <div class="loading-spinner">Loading system states...</div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Row: Audit Ledger & Cryptographic History -->
+        <section class="panel ledger-panel">
+            <div class="panel-header">
+                <h2>🔐 Cryptographic Append-Only Audit Ledger</h2>
+                <div class="ledger-meta">
+                    <span class="ledger-hash-head" id="ledger-top-hash">Top Hash: SHA256-GENESIS...</span>
+                    <button class="btn-sm" onclick="verifyLedgerIntegrity()">Verify Hash Chain</button>
+                </div>
+            </div>
+            
+            <div class="table-wrapper">
+                <table class="ledger-table">
+                    <thead>
+                        <tr>
+                            <th>Log ID</th>
+                            <th>Timestamp</th>
+                            <th>Event Type</th>
+                            <th>Candidate ID</th>
+                            <th>Idempotency Key</th>
+                            <th>Source</th>
+                            <th>Affected Systems</th>
+                            <th>Status</th>
+                            <th>SHA-256 Hash</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ledger-tbody">
+                        <tr><td colspan="9" class="text-center">Loading audit log entries...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

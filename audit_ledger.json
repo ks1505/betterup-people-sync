@@ -1,0 +1,121 @@
+[
+  {
+    "log_id": "AUDIT-000001",
+    "timestamp": "2026-08-22T11:11:27.968893",
+    "event_type": "OFFER_ACCEPTED",
+    "candidate_id": "CAND-1001",
+    "idempotency_key": "8b653853bd933db668dd409c924dc394",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "record",
+        "old_value": null,
+        "new_value": "CREATED"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "hardware_order",
+        "old_value": null,
+        "new_value": "ORDERED"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "0bfd0e314b72ddd992869fee61bac90b1aa41cc6041a2356ab225806df1dc067",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000002",
+    "timestamp": "2026-08-22T11:11:27.970703",
+    "event_type": "OFFER_ACCEPTED",
+    "candidate_id": "CAND-1002",
+    "idempotency_key": "474fccec5084e4613a31960d8e18d0de",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "record",
+        "old_value": null,
+        "new_value": "CREATED"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "hardware_order",
+        "old_value": null,
+        "new_value": "ORDERED"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "4c4e54e98403f79f4488e94e181d554805e9b393dfaae7475b8229cc623574b4",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000003",
+    "timestamp": "2026-08-22T11:11:51.323320",
+    "event_type": "START_DATE_CHANGED",
+    "candidate_id": "CAND-1001",
+    "idempotency_key": "a42b43bae1a08bc00db6f01beba91740",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "hire_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      },
+      {
+        "target_system": "Okta_Lumos",
+        "field": "activation_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "target_start_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "8a52346bcfc4377b71c689341b08538a77480fa3ed2e46afcb2b0eefb6bc47d6",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000004",
+    "timestamp": "2026-08-22T11:12:03.809643",
+    "event_type": "VALIDATION_FAILED",
+    "candidate_id": "CAND-BAD-ADDR",
+    "idempotency_key": "178dd7813d54a9d828b8a02f9e7ced9a",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [],
+    "changes": [
+      {
+        "error": "address.zip_code: ZIP code 'BAD99' is invalid for US shipping. Must be 5 digits (e.g. 94105)."
+      }
+    ],
+    "status": "BLOCKED",
+    "hash": "99489e82a679ab4fddaa5ea0ef7d5a4ae302b3df36d65ceb387cd481f87dd247",
+    "details": "Pre-flight validation failed. Propagation halted to prevent data contamination."
+  }
+]

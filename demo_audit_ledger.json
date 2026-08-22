@@ -1,0 +1,273 @@
+[
+  {
+    "log_id": "AUDIT-000001",
+    "timestamp": "2026-08-22T11:11:15.258784",
+    "event_type": "OFFER_ACCEPTED",
+    "candidate_id": "CAND-MAYA-101",
+    "idempotency_key": "d967f4141d53e1c88dac953c6c320d24",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "record",
+        "old_value": null,
+        "new_value": "CREATED"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "hardware_order",
+        "old_value": null,
+        "new_value": "ORDERED"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "b1032aa028cb1f2317a621d0d8dc779b3f2fb1389458eaa779995c205c9f7bbb",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000002",
+    "timestamp": "2026-08-22T11:11:15.260817",
+    "event_type": "START_DATE_CHANGED",
+    "candidate_id": "CAND-MAYA-101",
+    "idempotency_key": "7b7875ccadbc53606126be0555787710",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "hire_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      },
+      {
+        "target_system": "Okta_Lumos",
+        "field": "activation_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "target_start_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "0c667770b0a16b4dd191c3335d280dfe8e1485fd09d8e6402febfd69a7f3e652",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000003",
+    "timestamp": "2026-08-22T11:11:15.266767",
+    "event_type": "VALIDATION_FAILED",
+    "candidate_id": "CAND-BAD-202",
+    "idempotency_key": "91fd4ccc2ec1a8416f722552a98ed131",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [],
+    "changes": [
+      {
+        "error": "address.street: Street address is missing or too short for shipping."
+      },
+      {
+        "error": "address.zip_code: ZIP code 'BAD_ZIP_99' is invalid for US shipping. Must be 5 digits (e.g. 94105)."
+      }
+    ],
+    "status": "BLOCKED",
+    "hash": "97fe3cb0477981b60a35944317d0589780b0588485c62a47f4e8cfcd768e2f3c",
+    "details": "Pre-flight validation failed. Propagation halted to prevent data contamination."
+  },
+  {
+    "log_id": "AUDIT-000004",
+    "timestamp": "2026-08-22T11:11:15.274591",
+    "event_type": "OFF_CYCLE_HIRE_CREATED",
+    "candidate_id": "WD-OFFCYCLE-505",
+    "idempotency_key": "5efeee6430d5146b556545d14a9d0bbd",
+    "source_system": "Workday_Direct",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "record",
+        "old_value": null,
+        "new_value": "CREATED"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "hardware_order",
+        "old_value": null,
+        "new_value": "ORDERED"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "f5017a64f24f4ed93d245657cb71ed7bbcd111283a628e9d17cb20a33754d9ca",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000005",
+    "timestamp": "2026-08-22T11:11:23.996252",
+    "event_type": "OFFER_ACCEPTED",
+    "candidate_id": "CAND-MAYA-101",
+    "idempotency_key": "d967f4141d53e1c88dac953c6c320d24",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "record",
+        "old_value": null,
+        "new_value": "CREATED"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "hardware_order",
+        "old_value": null,
+        "new_value": "ORDERED"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "ff07101d6cdc02523dfed3065dd48a1b037ca25b93904afb452ba53e1c161afc",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000006",
+    "timestamp": "2026-08-22T11:11:24.007670",
+    "event_type": "START_DATE_CHANGED",
+    "candidate_id": "CAND-MAYA-101",
+    "idempotency_key": "7b7875ccadbc53606126be0555787710",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "hire_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      },
+      {
+        "target_system": "Okta_Lumos",
+        "field": "activation_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "target_start_date",
+        "old_value": "2026-09-01",
+        "new_value": "2026-09-15"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "e779992ed292c24a3a7ad48aa00fd0072b0900035012c60d82229fce0c744262",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000007",
+    "timestamp": "2026-08-22T11:11:24.016044",
+    "event_type": "VALIDATION_FAILED",
+    "candidate_id": "CAND-BAD-202",
+    "idempotency_key": "91fd4ccc2ec1a8416f722552a98ed131",
+    "source_system": "Ashby_ATS",
+    "affected_systems": [],
+    "changes": [
+      {
+        "error": "address.street: Street address is missing or too short for shipping."
+      },
+      {
+        "error": "address.zip_code: ZIP code 'BAD_ZIP_99' is invalid for US shipping. Must be 5 digits (e.g. 94105)."
+      }
+    ],
+    "status": "BLOCKED",
+    "hash": "743d6f5e261c793ac4d2676616a46fd5da6d1217afaf6d4db385455c2dc0bfe4",
+    "details": "Pre-flight validation failed. Propagation halted to prevent data contamination."
+  },
+  {
+    "log_id": "AUDIT-000008",
+    "timestamp": "2026-08-22T11:11:24.025334",
+    "event_type": "OFF_CYCLE_HIRE_CREATED",
+    "candidate_id": "WD-OFFCYCLE-505",
+    "idempotency_key": "5efeee6430d5146b556545d14a9d0bbd",
+    "source_system": "Workday_Direct",
+    "affected_systems": [
+      "Workday_HRIS",
+      "Okta_Lumos",
+      "ExpoIT_Hardware",
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "target_system": "Workday_HRIS",
+        "field": "record",
+        "old_value": null,
+        "new_value": "CREATED"
+      },
+      {
+        "target_system": "ExpoIT_Hardware",
+        "field": "hardware_order",
+        "old_value": null,
+        "new_value": "ORDERED"
+      }
+    ],
+    "status": "SUCCESS",
+    "hash": "7badf00ca24cf4be36743b74e0f1c1592a5c20bb5782e0eb207ae111ba386a64",
+    "details": "Successfully reconciled state across 5 systems."
+  },
+  {
+    "log_id": "AUDIT-000009",
+    "timestamp": "2026-08-22T11:11:24.033846",
+    "event_type": "SLA_BREACH_WARNING",
+    "candidate_id": "CAND-URGENT-606",
+    "idempotency_key": "SLA-CAND-URGENT-606-IT_HARDWARE_ORDER-2026-08-22",
+    "source_system": "SLAGatekeeper",
+    "affected_systems": [
+      "Cohort_Tracker",
+      "Slack_Comms"
+    ],
+    "changes": [
+      {
+        "candidate_id": "CAND-URGENT-606",
+        "candidate_name": "Marcus Vance",
+        "gate": "IT_HARDWARE_ORDER",
+        "days_until_start": 4,
+        "sla_threshold_days": 7,
+        "severity": "HIGH",
+        "issue": "Hardware order not placed with ExpoIT. Only 4 days left until start date 2026-08-26.",
+        "recommended_action": "Trigger urgent IT equipment expedite order via ExpoIT portal."
+      }
+    ],
+    "status": "SLA_ALERT",
+    "hash": "9d7c05f6710737d69591c50a1ec6869b74f33e67d6131e45230bb1860f217bdf",
+    "details": "SLA breach detected for gate IT_HARDWARE_ORDER (HIGH). Escalation dispatched."
+  }
+]
